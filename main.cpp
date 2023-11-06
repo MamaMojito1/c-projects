@@ -9,8 +9,27 @@
 
 using namespace std;
 
+int add(int x, int y)
+{
+    return x + y;
+}
+int sub(int x, int y)
+{
+    return x - y;
+}
+int mul(int x, int y)
+{
+    return x * y;
+}
+int divv(int x, int y)
+{
+    return x / y;
+}
+
+
 int main()
 {
+    int num1, num2;
     unordered_map<string,string> memory;
     string user_input;
 
@@ -29,6 +48,10 @@ int main()
 
         if(user_input == "hi" || user_input == "hello" || user_input=="hey"){;
             cout << "Hello user how can i help you ?\n";
+        }
+        else if(user_input == "who are you" || user_input == "who are you?" || user_input == "who are you ?" || user_input == "who r u" || user_input == "who are u")
+        {
+            cout << "I am a chat-bot.\n";
         }
         else if(user_input == "how are you" || user_input == "are you ok"){
             cout << "As a ChatBot i have no emotional states\n";
@@ -96,6 +119,35 @@ int main()
             cout << "Closing Google\n";
             system("TASKKILL /IM chrome.exe /F");
 
+        }
+        else if(user_input == "add two number" || user_input == "add" || user_input == "add number")
+        {
+            cout << "Enter two number :\n";
+            cin >> num1 >> num2;
+            cout << "\nSum = " << add(num1, num2) << "\n\n";
+        }
+        else if(user_input == "subtract two number" || user_input == "sub" || user_input == "subtract number")
+        {
+            cout << "Enter two number :\n";
+            cin >> num1 >> num2;
+            cout << "\n" << sub(num1, num2) << "\n\n";
+        }
+        else if(user_input == "multiply two number" || user_input == "mul" || user_input == "multiply" || user_input == "multiply number")
+        {
+            cout << "Enter two number :\n";
+            cin >> num1 >> num2;
+            cout << "\n" << mul(num1, num2) << "\n\n";
+
+        }
+        else if(user_input == "divide two number" || user_input == "divide" || user_input == "divide number" || user_input == "div")
+        {
+            cout << "Enter two number :\n";
+            cin >> num1 >> num2;
+            cout << "\n" << divv(num1, num2) << "\n";
+            if(num1 % num2 != 0)
+            {
+                cout << "Remainder = " << num1 % num2 << "\n\n";
+            }
         }
         else{
             cout << "I didn't get that, sorry\n";
