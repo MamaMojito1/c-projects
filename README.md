@@ -2,4 +2,4 @@
 
 there is different folder for C and C++
 
-This is my codeing storage palace.
+This is my coding storage palace.
